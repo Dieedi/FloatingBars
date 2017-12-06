@@ -8,7 +8,7 @@ No dependencies are required.
 
 How to use :
 
-After installing the asset, a new item is added in your menu bar allowing to create, edit or destroy a floating bar.
+After installing the asset, a new 'Floating Bars' item is added under 'Tools' in your menu bar allowing to create, edit or destroy a floating bar.
 
 To create a new Floating bar, click on Floating Bars -> Open Creator, a new window will open, in this window you can :
 

@@ -50,7 +50,7 @@ public class FloatingBarsCreateWindow : EditorWindow
 	//============================
 	// Create Bar Window
 	//============================
-	[MenuItem("Floating Bars/Open Creator", false, 1)]
+	[MenuItem("Tools/Floating Bars/Open Creator", false, 1)]
 	private static void ShowWindow()
 	{
 		positiveImage = Resources.Load<Sprite>("FloatingBar");
@@ -65,7 +65,7 @@ public class FloatingBarsCreateWindow : EditorWindow
 	// Edit Bar Window
 	//============================
 
-	[MenuItem("Floating Bars/Edit Bar (Bar has to be selected)", false, 2)]
+	[MenuItem("Tools/Floating Bars/Edit Bar (Bar has to be selected)", false, 2)]
 	private static void ShowEditWindow()
 	{
 		SaveDatas();
@@ -79,11 +79,11 @@ public class FloatingBarsCreateWindow : EditorWindow
 	}
 
 	// Validate that the object can receive a floating bar
-	[MenuItem("Floating Bars/Edit Bar (Bar has to be selected)", true)]
+	[MenuItem("Tools/Floating Bars/Edit Bar (Bar has to be selected)", true)]
 	private static bool ShowEditWindowValidation()
 	{
 		// Return true if we select a gameObject
-		if (Selection.activeGameObject.GetComponent<FloatingBarController>())
+		if (Selection.activeGameObject && Selection.activeGameObject.GetComponent<FloatingBarController>() != null)
 			return Selection.activeGameObject.GetComponent<FloatingBarController>().GetType() == typeof(FloatingBarController);
 
 		return false;
@@ -93,7 +93,7 @@ public class FloatingBarsCreateWindow : EditorWindow
 	// Destroy Item
 	//==============================
 
-	[MenuItem("Floating Bars/Destroy Bar (Bar has to be selected)", false, 2)]
+	[MenuItem("Tools/Floating Bars/Destroy Bar (Bar has to be selected)", false, 2)]
 	private static void DestroyBar()
 	{
 		DestroyImmediate(Selection.activeGameObject.GetComponentInParent<FloatingBarVariableController>());
@@ -101,11 +101,11 @@ public class FloatingBarsCreateWindow : EditorWindow
 	}
 
 	// Validate that the object can receive a floating bar
-	[MenuItem("Floating Bars/Destroy Bar (Bar has to be selected)", true)]
+	[MenuItem("Tools/Floating Bars/Destroy Bar (Bar has to be selected)", true)]
 	private static bool DestroyBarValidation()
 	{
 		// Return true if we select a gameObject
-		if (Selection.activeGameObject.GetComponent<FloatingBarController>())
+		if (Selection.activeGameObject && Selection.activeGameObject.GetComponent<FloatingBarController>() != null)
 			return Selection.activeGameObject.GetComponent<FloatingBarController>().GetType() == typeof(FloatingBarController);
 
 		return false;
