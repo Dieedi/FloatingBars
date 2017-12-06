@@ -1,5 +1,7 @@
 Floating Bars (v1)
 
+1. Setup & Usage
+
 This asset is designed to create simple floating bar hover your objects (health bar on player...)
 
 No dependencies are required.
@@ -24,3 +26,10 @@ Once 'Mandatory Settings' are filled you can click on 'Add New Floating Bar' but
 To Edit a Floating Bar, Select the desired Floating Bar in your Hierarchy and go to 'Floating Bars' menu, then 'Edit Bar'. Now you should see the original bar settings but if you change values, your bar will automatically change in your scene allow you to fine tune your bar.
 
 At last, you can destroy your bar by selecting it and go to 'Floating Bars' menu, then 'Destroy Bar'. (this action destroy the bar and the controller component added to the parent GameObject)
+
+2. Links
+
+- If you have any questions, improvements suggestions feel free to mail at pouillotjeremy@gmail.com . I'll try to answer you as best as I can.
+- Github repository : https://github.com/Dieedi/FloatingBars
+
+3. FAQ (once i'll have relevant questions)
